@@ -123,12 +123,21 @@ class FilesOperations:
             return
         else:
             filecontent = ""
-            with open(path, "r") as f:
-                filecontent = f.read()
+            try:
+                with open(path, "r") as f:
+                    filecontent = f.read()
+            except:
+                QMessageBox.critical(widget, "Error", "Error with reading file.")
+                return
             fileEdit = FileEditDialog(os.path.basename(path), filecontent)
             fileEdit.exec()
             status = fileEdit.status
             if status:
                 filecontent = fileEdit.filecontent
-                with open(path, "w") as f:
-                    f.write(filecontent)
+                try:
+                    with open(path, "w") as f:
+                        f.write(filecontent)
+                except:
+                    QMessageBox.critical(widget, "Error", "Error with saving file.")
+
+
