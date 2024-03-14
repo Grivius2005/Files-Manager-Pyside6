@@ -1,3 +1,3 @@
 # Description
 
-School project files manager desktop app .\
+School project files manager desktop app
