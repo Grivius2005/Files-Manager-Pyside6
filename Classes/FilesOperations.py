@@ -4,7 +4,7 @@ import shutil
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QFileDialog, QWidget, QMessageBox, QInputDialog, QLineEdit, QDialog
 
-from FileManager.Classes.FileEditDialog import FileEditDialog
+from .FileEditDialog import FileEditDialog
 
 
 class FilesOperations:

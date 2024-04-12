@@ -4,8 +4,8 @@ from PySide6.QtWidgets import QTreeView, QFileSystemModel, QWidget, QLabel, QGri
     QLineEdit, QFileIconProvider
 from PySide6.QtCore import Qt
 
-from FileManager.Classes.FilesIconProvider import FilesIconProvider
-from FileManager.Classes.FilesOperations import FilesOperations
+from .FilesIconProvider import FilesIconProvider
+from .FilesOperations import FilesOperations
 
 
 class FilesManagerView(QWidget):
